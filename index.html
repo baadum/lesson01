@@ -7,10 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        var hello;
-        hello = "Hello World";
-        console.log (hello);
-    </script>
+  
+<script>
+  var userAge = +prompt('Сколько вам лет?');
+    var shorterAge = userAge%100 
+    var ending
+
+        if(shorterAge >= 5 && shorterAge <= 20) {
+            ending = ' лет';
+        }
+        else {
+            shorterAge = shorterAge%10             
+            if (shorterAge ==1) {
+                ending = ' год';
+            }
+            else if (shorterAge>1 && shorterAge<5) {
+                ending = ' года';
+            }
+            else {
+                ending = ' лет';
+            }
+        }
+
+        alert( userAge + ending ); 
+</script>
 </body>
 </html>
